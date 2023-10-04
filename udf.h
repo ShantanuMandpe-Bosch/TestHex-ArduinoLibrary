@@ -1,6 +1,7 @@
 #ifndef udf_h
 #define udf_h
 
+// add sensor defaults to this structure 
 typedef struct udf
 {
     short sensorID[2] = {1,2} ;
@@ -12,11 +13,3 @@ typedef struct udf
 }udf;
 
 #endif
-
-/*
-    dataID:
-    1 -> Plotting Data : dataID sensorID sensorName-axis eventSize parseFormat axisName scalingFactor sensorData (for that particular axis) 
-    2 -> Log : dataID consoleLog sensorName-axis
-    3 -> 3D data : dataID:Teleplot format 
-*/
-

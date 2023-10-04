@@ -11,7 +11,6 @@ String shortIntToHex(short value) {
   } else {
     hexString += String(value, HEX);
   }
-
   return hexString;
 }
 
@@ -26,7 +25,6 @@ String textToHex(const String &text) {
     hexString += hexChars[highNibble];
     hexString += hexChars[lowNibble];
   }
-
   return hexString;
 }
 
@@ -35,8 +33,7 @@ String shortIntToBinary(short value) {
   short numBits = sizeof(value) * 8;
 
   for (int i = numBits - 1; i >= 0; i--) {
-    short bit = bitRead(value, i);
-    
+    short bit = bitRead(value, i);   
     binaryString += String(bit);
   }
   return binaryString;
@@ -52,6 +49,5 @@ String textToBinary(const String &text) {
       binaryString += String(bit);
     }
   }
-
   return binaryString;
 }

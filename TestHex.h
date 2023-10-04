@@ -14,5 +14,4 @@ class TestHex
 };
 
 #endif
-
-//3D| Name : S(cube/sphere) : P:px:py:pz : R:rx:ry:rz : C:color_name : O:0-1(float value between)  
+ 

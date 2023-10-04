@@ -10,6 +10,7 @@ TestHex::TestHex(short id)
   _id = id;
 }
 
+//3D| Name : S(cube/sphere) : P:px:py:pz : R:rx:ry:rz : C:color_name 
 void TestHex::teleplot3D(String shape,String shapeName, short shapePosition[], short shapeRotation[], String shapeColor){
   String serial3D = "3D|"+ shapeName +":S:"+ shape +":R:" +String(shapeRotation[0])+ ":" +String(shapeRotation[1])+ ":" +String(shapeRotation[2])+":P:"+ String(shapePosition[0]) + ":" +String(shapePosition[1])+ ":" +String(shapePosition[2])+ ":C:" +shapeColor;
   Serial.print(textToBinary("3"));
@@ -19,7 +20,6 @@ void TestHex::teleplot3D(String shape,String shapeName, short shapePosition[], s
 
 void TestHex::convert(short sensorValue,String axis,short dataID)
 {
-
   udf sensor;
   int counter = 0;
   int length = sizeof(sensor.sensorID)/sizeof(sensor.sensorID[0]);
@@ -45,9 +45,9 @@ void TestHex::convert(short sensorValue,String axis,short dataID)
     Serial.println(textToBinary(serialData)); 
   } else {
     // we are sending console data  
-      String serialConsole = ":The data being sent is from sensor ->" + hex2 + " ->" + hex7;
-      Serial.print(textToBinary("2"));
-      Serial.print(" ");
-      Serial.println(textToBinary(serialConsole));
+    String serialConsole = ":The data being sent is from sensor ->" + hex2 + " ->" + hex7;
+    Serial.print(textToBinary("2"));
+    Serial.print(" ");
+    Serial.println(textToBinary(serialConsole));
   }
 }
